@@ -18,12 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-I1-LvS">
-                                <rect key="frame" x="37" y="183.5" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1A-Oj-7Lz">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
                                 <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="KXU-sv-R3l"/>
-                                    <constraint firstAttribute="width" constant="300" id="R3p-Cx-fMY"/>
+                                    <constraint firstAttribute="height" constant="300" id="8oR-ff-b9P"/>
+                                    <constraint firstAttribute="width" constant="300" id="pFU-mn-ZIX"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-X4-xNP">
+                                <rect key="frame" x="50" y="594" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="fNS-zG-yX6"/>
+                                    <constraint firstAttribute="width" constant="20" id="xqc-1r-3Q3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -31,15 +39,29 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="9ng-I1-LvS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9SD-Li-syP"/>
-                            <constraint firstItem="9ng-I1-LvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pok-CQ-K7i"/>
+                            <constraint firstItem="E1A-Oj-7Lz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2bx-ux-uyb"/>
+                            <constraint firstItem="E1A-Oj-7Lz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bmz-UC-c2F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cyf-Gy-SF9" appends="YES" id="8p9-le-RoK"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="blueSquare" destination="E1A-Oj-7Lz" id="hbE-Kl-pIL"/>
+                        <outlet property="pixelBlock" destination="dFq-X4-xNP" id="aUe-mI-bQx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cyf-Gy-SF9">
+                    <connections>
+                        <action selector="onTappedSquare:" destination="BYZ-38-t0r" id="PCq-Bi-XQH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="759" y="108"/>
         </scene>
     </scenes>
 </document>
