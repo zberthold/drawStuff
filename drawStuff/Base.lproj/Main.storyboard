@@ -37,12 +37,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U24-WD-VZU">
+                                <rect key="frame" x="137.5" y="284" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="OuK-1Q-jiJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="fVL-iy-CQF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="E1A-Oj-7Lz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2bx-ux-uyb"/>
                             <constraint firstItem="E1A-Oj-7Lz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bmz-UC-c2F"/>
+                            <constraint firstItem="U24-WD-VZU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JLw-nA-mRQ"/>
+                            <constraint firstItem="U24-WD-VZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KyJ-4v-dN1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -52,6 +64,7 @@
                     <connections>
                         <outlet property="blueSquare" destination="E1A-Oj-7Lz" id="hbE-Kl-pIL"/>
                         <outlet property="pixelBlock" destination="dFq-X4-xNP" id="aUe-mI-bQx"/>
+                        <outlet property="testLabel" destination="U24-WD-VZU" id="ucC-oy-RQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
